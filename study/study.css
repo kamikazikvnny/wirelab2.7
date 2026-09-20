@@ -1,0 +1,639 @@
+/* =========================================================
+   WIRELAB — STUDY PAGE
+   Gold Minimalist Theme
+========================================================= */
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.study-content {
+    width: min(1200px, 94%);
+    margin: 0 auto;
+    padding: 32px 0 70px;
+}
+
+
+/* =========================================================
+   STUDY HERO
+========================================================= */
+
+.study-hero {
+    position: relative;
+
+    min-height: 360px;
+
+    margin-bottom: 55px;
+
+    overflow: hidden;
+
+    border: 1px solid #5e5e5e;
+    border-radius: 8px;
+
+    background: #1d1d1d;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+
+.study-hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.study-hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.42;
+}
+
+
+/* Dark overlay */
+
+.study-hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 20, 20, 0.96) 0%,
+            rgba(20, 20, 20, 0.76) 42%,
+            rgba(20, 20, 20, 0.38) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.study-hero-overlay {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+
+    padding: 70px 60px;
+}
+
+
+.study-hero-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+    padding: 7px 13px;
+
+    border: 1px solid #b89445;
+    border-radius: 3px;
+
+    color: #d6b35a;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.study-hero h1 {
+    margin: 0 0 14px;
+
+    color: #e1bf68;
+
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.study-hero p {
+    max-width: 570px;
+
+    margin: 0;
+
+    color: #d0d0d0;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.study-section {
+    margin-bottom: 70px;
+}
+
+
+.section-heading {
+    margin-bottom: 26px;
+}
+
+
+.section-kicker {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #b89445;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #e2e2e2;
+
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+}
+
+
+.section-heading p {
+    margin: 8px 0 0;
+
+    color: #999;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   STUDY CARD
+========================================================= */
+
+.study-card {
+    position: relative;
+
+    margin-bottom: 20px;
+
+    padding: 25px 28px;
+
+    border: 1px solid #555;
+    border-left: 3px solid #b89445;
+    border-radius: 5px;
+
+    background: #292929;
+}
+
+
+.study-card-content h3 {
+    margin: 0 0 9px;
+
+    color: #d6b35a;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+
+.study-card-content p {
+    max-width: 850px;
+
+    margin: 0;
+
+    color: #bdbdbd;
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   UNIT LIST
+========================================================= */
+
+.unit-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.unit-list details,
+.appendix-list details {
+    border: 1px solid #454545;
+    border-radius: 4px;
+
+    background: #292929;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.unit-list details:hover,
+.appendix-list details:hover {
+    border-color: #806b3c;
+}
+
+
+.unit-list details[open],
+.appendix-list details[open] {
+    border-color: #9b7c35;
+
+    background: #2c2c2c;
+}
+
+
+.unit-list summary,
+.appendix-list summary {
+    position: relative;
+
+    padding: 15px 18px;
+
+    cursor: pointer;
+
+    color: #d5d5d5;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    list-style: none;
+}
+
+
+.unit-list summary::-webkit-details-marker,
+.appendix-list summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.unit-list summary::after,
+.appendix-list summary::after {
+    content: "+";
+
+    position: absolute;
+
+    right: 18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #b89445;
+
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+
+.unit-list details[open] summary::after,
+.appendix-list details[open] summary::after {
+    content: "−";
+}
+
+
+.unit-list summary:hover,
+.appendix-list summary:hover {
+    color: #e0c16c;
+}
+
+
+/* =========================================================
+   UNIT CONTENT
+========================================================= */
+
+.unit-content {
+    padding: 0 18px 18px;
+
+    border-top: 1px solid #3f3f3f;
+
+    color: #a9a9a9;
+
+    font-size: 0.86rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   REFERENCE CARDS
+========================================================= */
+
+.reference-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+
+    gap: 12px;
+}
+
+
+.reference-card {
+    min-height: 145px;
+
+    padding: 22px;
+
+    border: 1px solid #454545;
+    border-radius: 5px;
+
+    background: #292929;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.reference-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #9b7c35;
+}
+
+
+.reference-card h3 {
+    margin: 0 0 12px;
+
+    color: #d6b35a;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.reference-card p {
+    margin: 0;
+
+    color: #a7a7a7;
+
+    font-size: 0.84rem;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   STUDY TOOLS
+========================================================= */
+
+.tools-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 14px;
+}
+
+
+.study-tool-card {
+    display: block;
+
+    min-height: 175px;
+
+    padding: 25px;
+
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+
+    background: #292929;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.study-tool-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #b89445;
+
+    background: #2d2d2d;
+}
+
+
+.study-tool-card h3 {
+    margin: 0 0 11px;
+
+    color: #d6b35a;
+
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+
+.study-tool-card p {
+    margin: 0 0 20px;
+
+    color: #a8a8a8;
+
+    font-size: 0.85rem;
+    line-height: 1.65;
+}
+
+
+.tool-link {
+    color: #b89445;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.study-tool-card:hover .tool-link {
+    color: #e0c16c;
+}
+
+
+/* =========================================================
+   APPENDIX LIST
+========================================================= */
+
+.appendix-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    max-width: 850px;
+}
+
+
+/* =========================================================
+   GOLD DIVIDER
+========================================================= */
+
+.study-section + .study-section {
+    position: relative;
+}
+
+
+.study-section + .study-section::before {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 1px;
+
+    margin-bottom: 45px;
+
+    background: #9b7c35;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .study-content {
+        width: 94%;
+
+        padding-top: 22px;
+        padding-bottom: 50px;
+    }
+
+
+    .study-hero {
+        min-height: 320px;
+
+        margin-bottom: 42px;
+    }
+
+
+    .study-hero-overlay {
+        padding: 50px 28px;
+    }
+
+
+    .study-hero h1 {
+        font-size: 2.7rem;
+    }
+
+
+    .study-hero p {
+        font-size: 0.9rem;
+    }
+
+
+    .study-section {
+        margin-bottom: 52px;
+    }
+
+
+    .study-card {
+        padding: 21px;
+    }
+
+
+    .reference-grid,
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .reference-card {
+        min-height: auto;
+    }
+
+
+    .study-tool-card {
+        min-height: auto;
+    }
+
+
+    .unit-list summary,
+    .appendix-list summary {
+        padding: 14px 42px 14px 15px;
+
+        font-size: 0.85rem;
+    }
+
+
+    .unit-content {
+        padding: 0 15px 16px;
+
+        font-size: 0.82rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .study-content {
+        width: 92%;
+    }
+
+
+    .study-hero {
+        min-height: 300px;
+    }
+
+
+    .study-hero-overlay {
+        padding: 42px 22px;
+    }
+
+
+    .study-hero-label {
+        font-size: 0.65rem;
+    }
+
+
+    .study-hero h1 {
+        font-size: 2.35rem;
+    }
+
+
+    .study-hero p {
+        font-size: 0.84rem;
+        line-height: 1.6;
+    }
+
+
+    .section-heading h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .section-kicker {
+        font-size: 0.65rem;
+    }
+
+}
